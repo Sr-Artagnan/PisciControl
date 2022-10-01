@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link href="https://icons8.com/icon/43519/relógio">
+    <link rel="stylesheet" href="./style.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+    <div class="div_mask
+    ">
+	<div class="card-master">
+
+        <div class="GPD_card">
+            <div class="div_icons" style="justify-content: right;">
+                <i class="close-icon close-icon1 fa fa-close" onclick="closed()"></i>
+            </div>
+            <div class="div_top">
+                <label >Última biometria:</label>
+                <input style="font-size: 12px" type="number" placeholder="Peso dos peixes (g)" class="input_weight" step=".01">
+             <input  style="font-size: 12px" placeholder="Data" class="input_weight" step=".01" onfocus="(this.type='date')"
+             onblur="(this.type='text')">
+        </div>
+        <div class="div_botton">
+            <label >Penúltima biometria:</label>
+            <input style="font-size: 12px" type="number" placeholder="Peso dos peixes (g)" class="input_weight" step=".01">
+         <input  style="font-size: 12px" placeholder="Data" class="input_weight" step=".01" onfocus="(this.type='date')"
+         onblur="(this.type='text')">
+    </div>
+            <button>Salvar <i class="icon fa-solid fa-circle-check"></i></button>
+
+        </div>
+
+        <h1>Informações de custo:</h1>
+
+		<div class="wrapper">
+
+
+			<label class="label_output_def" >Custo ração (25kg): R$
+			<input type="number" disabled step=".01" class="input_def" value=""> 
+            <i id="edit_icon" class="icon fa fa-edit" onclick="editCost(this)"></i>
+            <i id="save_icon" class="icon fa-solid fa-circle-check hidden" onclick="saveCost()"></i>
+            </label>
+			<label class="label_output_def" >Ganho de peso diário:
+				<b class="output_def" ></b></label>
+			<label class="label_output_def" >Conversão Alimentar: 
+                <b class="output_def" ></b></label>
+			<label class="label_output_def" >Custo médio últimos 30 dias: R$
+                <b class="output_def" ></b></label>
+			<label class="label_output_def" >Custo relativo: R$
+                <b class="outputt_def" ></b></label>
+
+        </div>
+	</div>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="./script.js"> </script>
+
+</body>
+
+</html>
