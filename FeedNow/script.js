@@ -1,6 +1,4 @@
 //// Postar variável:
-console.log("ua");
-
 const amountFoodInput = $("#amount-food");
 const sendButton = $("#submit");
 const outputTime = document.querySelector('#output-timestamp');
@@ -50,8 +48,14 @@ function postData(token, food, callback) {
           console.log('Enviado!');
       });
       document.querySelector(".notification").classList.remove("hidden");
-      const count = document.querySelector("#count");      
-
+      const count = document.querySelector("#count");  
+    setTimeout(() => { count.innerHTML = '5'; }, 1000);   
+    setTimeout(() => { count.innerHTML = '4'; }, 2000);  
+    setTimeout(() => { count.innerHTML = '3'; }, 3000);  
+    setTimeout(() => { count.innerHTML = '2'; }, 4000);  
+    setTimeout(() => { count.innerHTML = '1'; }, 5000);  
+    setTimeout(() => { count.innerHTML = '0'; }, 6000);  
+    setTimeout(() => { document.querySelector(".notification").classList.add("hidden"); }, 7000); 
   });
 
 
