@@ -1,0 +1,32 @@
+/* Add your CSS code below */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    color: #44475A;
+  }
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background:white;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+.red_alert {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding: 20px;
+    border: solid 2px #df4141;
+    border-radius: 6px;
+    margin: 40px;
+}
+
+.red_alert h1{
+    font-size: 22px;
+}
