@@ -228,9 +228,9 @@ if (weight < 10) { tca=1}; if (weight>= 10 && weight < 50) { tca=1.1} if (weight
 
                                 closed();
                                 console.log("Enviado");
-                                setTimeout(()=> {
-                                window.location.reload();
-                                }, 2000)
+                                //setTimeout(()=> {
+                               // window.location.reload();
+                                //}, 2000)
 
                                 }
 
