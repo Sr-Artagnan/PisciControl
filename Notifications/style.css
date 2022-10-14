@@ -1,0 +1,66 @@
+/* Add your CSS code below */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    color: #44475A;
+  }
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background:white;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+.reload_icon {
+    color: #007FF3;
+    font-weight: 800;
+    font-size: 25px;
+    margin-left: 15px;
+}
+.reload_icon:hover {
+    cursor: pointer;
+}
+
+.close-icon {
+  font-size: 23px;
+  padding: 1px;
+}
+
+.close-icon:hover {
+    cursor: pointer;
+    color: red;
+}
+.outputTime {
+  margin-left: 50vw;
+}
+
+.red_alert {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding: 20px;
+    padding-top: 10px;
+    border: solid 2px #df4141;
+    border-radius: 6px;
+    margin: 40px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.red_alert h1{
+    font-size: 22px;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <i class="fa-solid fa-arrow-rotate-right" onclick="reload_widget()"></i>
+    <div class="red_alert" id="hight_pH">
+        
+        <div class="title">
+            <h1>pH muito alto!</h1>
+            <p class="outputTime" id="pHTime"></p>
+            <div class="div_icons" style="justify-content: right;">
+                <i class="close-icon close-icon1 fa fa-close" onclick="closed(this)"></i>
+            </div>
+        </div>
+
+        <p>O pH da água do viveiro está muito alcalino, e pode ser prejudicial aos peixes. Verifique a qualidade da água.</p>
+    </div>
+
+    <div class="red_alert hidden" id="low_reservoir">
+
+        <div class="title">
+        <h1>A ração está acabando!</h1>
+        <p class="outputTime" id="reservoirTime"></p>
+        <div class="div_icons" style="justify-content: right;">
+            <i class="close-icon close-icon1 fa fa-close" onclick="closed(this)"></i>
+        </div>
+        </div>
+        
+        
+        <p>O reservatório está com menos de 10% da capacidade total. É hora de reabastecer!</p>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+<script type="text/javascript" src="./script.js"> </script>
+</html>
