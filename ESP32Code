@@ -3,6 +3,7 @@
 #include <OneWire.h>;
 #include <DallasTemperature.h>;
 #include <ESP32Time.h>;
+//#include <WiFiManager.h>;
 
 Servo servo;
 
@@ -28,10 +29,10 @@ OneWire oneWire(oneWireBus);
 DallasTemperature sensors(&oneWire);
 
 const char* UBIDOTS_TOKEN = "BBFF-XZJulh8fbTcknZ3S4Dc7rQ0aZZZOty";  // Put here your Ubidots TOKEN
-const char* WIFI_SSID = "DAVID - 2.4G";      
-const char* WIFI_PASS = "davidartagnan619";      
+const char* WIFI_SSID = "AndroidAP266C";      
+const char* WIFI_PASS = "trnc6458";      
 const char* PISCICONTROL_LABEL = "0cb815d664d8"; 
-const char* DATABASE_LABEL = "dataBase";
+const char* DATABASE_LABEL = "database";
 const char* AMOUNT_FOOD_PROVIDED = "amount-food-provided";
 const char* START_FEED = "start-feed";
 const char* MEAL_1 = "meal1";
@@ -39,7 +40,26 @@ const char* MEAL_1 = "meal1";
 Ubidots ubidots(UBIDOTS_TOKEN, UBI_HTTP);
 
 void setup() {
-  Serial.begin(115200);
+ Serial.begin(115200);  
+/*
+  WiFi.mode(WIFI_STA);
+  
+ 
+
+    WiFiManager wm;
+  wm.resetSettings();
+  bool res;
+  res = wm.autoConnect("ESP32.","jontinha");
+   if(!res) {
+        Serial.println("Failed to connect");
+        // ESP.restart();
+    } 
+    else {
+        //if you get here you have connected to the WiFi    
+        Serial.println("connected...yeey :)");
+    }
+*/
+    
   ubidots.wifiConnect(WIFI_SSID, WIFI_PASS);
   servo.attach(26);
   sensors.begin();
@@ -53,13 +73,11 @@ void loop() {
 
 //PH
 MeasurepH = analogRead(potPin);
-delay(50);
     Serial.print(MeasurepH);
     Serial.print(" | ");
     float voltage=(MeasurepH)*(3.3/4095.0);
     ph=(3.3*voltage);
     Serial.println(ph);
-    delay(500);
 ubidots.add("phwather", ph);
 
   struct tm timeinfo = rtc.getTimeStruct();
@@ -111,25 +129,21 @@ delay(50);
 
   if(startFeed == 1){
     // em 5 segundos, são liberados 0.1 KG de ração
-    int time = 6000;
+    int time = 4500;
     servo.write(90);
     delay(time);
     servo.write(0);
     ubidots.add(START_FEED, 0);
     bufferSent = ubidots.send();
+     delay(5000);
     }
     else {
     servo.write(0);
+    bufferSent = ubidots.send();
     }
-
-
-
-  delay(1000);
-  bufferSent = ubidots.send();
-  
 
   if (bufferSent) {
     Serial.println("Values sent by the device");
   }
-  delay(5000);
+ 
 }
