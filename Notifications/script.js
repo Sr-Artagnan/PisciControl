@@ -12,11 +12,6 @@ function reload_widget(){
     location.reload()
 }
 
-// Fechar notificação:
-function closed() {   
- 
-}
-
 
 // Pegar quantidade de ração no reservatório:
 function getReservoir(variable, callback) {
@@ -40,10 +35,27 @@ function getReservoir(variable, callback) {
     getReservoir(RESERVOIR, function (data) {
     const value = data.results[0].value;
     console.log(value);
-    if (value < 2) {
+    if (value < 0.5) {
+        fetch('https://api.mynotifier.app', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              apiKey: '31a22b41-46b8-4550-9383-75636ec5cbcb',
+              message: 'A ração está acabando!',
+              description: 'A quantidade de ração disponível no rerservatório é inferior a 1kg. É hora de reabastecer!',
+              type: 'success',
+              project: "",
+            }),
+          })
         reservoirNotification.classList.remove("hidden");
         const timestamp = data.results[0].timestamp;
         var date = new Date(timestamp);
         outpuTimeRes.innerHTML = date.getDate() + "/" + (date.getMonth()+1) + " - " +date.getHours() + ":" + date.getMinutes();;
     }
     });
+
+
+
+ 
