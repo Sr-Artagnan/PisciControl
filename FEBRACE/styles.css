@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+   
+}
+
+header{
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    background-color:#133954;
+    margin: 10px;
+}
+
+.list_header {
+    margin-top: 14px;
+    display: flex;
+    width: 17%;
+    justify-content: space-between;
+}
+
+.standard-input {
+ box-sizing: 23px;
+ width: auto;
+height: 38px;
+left: 517px;
+top: 31px;
+font-size: 20px;
+border: none;
+background-color:#133954;
+color: white;
+}
+
+.logo1{
+height: 47px;
+margin-top: 12px;
+
+
+}
+
+.logo2{
+    height: 25px;
+    margin-top: 16px;
+    
+    
+    }
