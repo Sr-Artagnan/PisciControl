@@ -13,10 +13,10 @@
 
 <body>
 
-    <div class="card-top"></div>
 
 	<div class="card-master">
        
+        <div class="card-top"></div>
 
 		<div class="notification hidden">
 			<p>Aguarde. A ração será fornecida.<b id="count"></b></p>
@@ -68,23 +68,22 @@
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
 
-.card-top , .card-master{
-    
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
 
 
 .card-top{
+  
+    position: fixed;
+    box-sizing: border-box;
+    width: 174px;
+    height: 89px;
+    top: 40px;
+    background: #DEF9FF;
+    border: 2px solid #00D1FF;
+    border-radius: 38px;
+    left: 26%;
 
-box-sizing: border-box;
-width: 174px;
-height: 89px;
-left: 416px;
-top: 224px;
-background: #DEF9FF;
-border: 2px solid #00D1FF;
-border-radius: 38px;
 
 }
 
@@ -108,13 +107,15 @@ body{
 
 
 .card-master {
-  
+    margin-top: 5%;
     height: 615px;
     width: 520px;
     justify-content: space-between;
     border: 1px solid #005A94;
     border-radius: 20px;
-    align-items:center;
+    align-items: center;
+    margin-left: 30%;
+   
 }
 
 .notification {
