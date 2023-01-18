@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"
+	<link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome
+    <link rel="stylesheet" href="./styles.css">
+
+	<title>FeedNow</title>
+</head>
+
+<body>
+
+<p2>pH da água</p2>
+	<div class="card-master">
+       
+        <label class="label">
+            <h2>Ultima atualização:</h2>
+        </label>
+
+        <div class="card-top">
+            <p>Classificação</p>
+        </div>
+
+
+
+	</div>
+
+
+
+</body>
+
+</html>
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:w
+
+p2{
+
+width: 322px;
+height: 38px;
+left: 840px;
+top: 1542px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+line-height: 38px;
+position: absolute;
+top: 21px;
+left: 31%;
+
+
+color: #133954;
+}
+
+p {
+    font-size: 22px;
+    margin-top: 16px;
+    text-align: center;
+    color: #133954;
+
+}
+
+.card-top{
+  
+    position: absolute;
+    box-sizing: border-box;
+    width: 233px;
+    height: 99px;
+    top: 340px;
+    background: #DEF9FF;
+    border: 2px solid #00D1FF;
+    border-radius: 20px;
+    left: 40%;
+
+
+}
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background:white;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+
+.card-master {
+    margin-top: 5%;
+    height: 327px;
+    width: 520px;
+    justify-content: space-between;
+    border: 2px solid #00A3FF;
+    border-radius: 20px;
+    align-items: center;
+    margin-left: 30%;
+   
+}
+
+
+.wrapper {
+    padding: 19px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.card-master h1 {
+   
+    height: 53px;
+    text-align: right 60px;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 58px;
+    top: 307px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 52px;
+
+color: #005A94;
+}
+
+.card-master h2{
+   
+    height: 60px;
+ 
+
+    margin-top: 155px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    width: 350px;
+    position: absolute;
+    left: 547px;
+    color: #133954;
+}
+
+
+
+.output-data {
+    font-size: 16px;
+}
+
+.submit:hover{
+    cursor: pointer;
+    color: #0084FE;
+    background-color: aliceblue;
+    border: solid 2px;
+    border-color: #0084FE;
+  }
+  
+
+.label_input_def {
+   
+    width: 422px;
+    height: 30px;
+    left: 552px;
+    top: 430px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    
+    color: #133954;
+}
+
+.hidden {
+  display: none;
+}
