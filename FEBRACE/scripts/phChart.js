@@ -1,7 +1,7 @@
 const ChartDay = document.querySelector("#ph_day");
 const ChartWeek = document.querySelector("#ph_week");
-const TodayBtn = document.querySelector("#temp_today");
-const WeekBtn = document.querySelector("#last_week_temp");
+const TodayBtn = document.querySelector("#ph_today");
+const WeekBtn = document.querySelector("#last_week_ph");
 
 function openChart (btn){
     if(btn == TodayBtn){
@@ -19,8 +19,8 @@ function openChart (btn){
 }
 
 setTimeout(()=>{
-    // TEMPERATURA POR DIA
-    function getTemp(variable, token, callback) {
+    // pH POR DIA
+    function getPh(variable, token, callback) {
     var url = 'https://industrial.api.ubidots.com/api/v1.6/variables/' + variable + '/values';
     var headers = {
     'X-Auth-Token': token,
@@ -56,7 +56,7 @@ setTimeout(()=>{
     }]
     });
     
-    getTemp(TEMP, TOKEN, function (values) {
+    getPh(PH, TOKEN, function (values) {
     var data = values.map(function (value) {
     return [value.timestamp, value.value];
     });
@@ -66,11 +66,11 @@ setTimeout(()=>{
     
     }, 100)
 
-//TEMPERATURA MÉDIA SEMANA
+//Ph MÉDIo SEMANA
 
 setTimeout(()=>{
-    // Pegar a temperatura:
-    function getTempWeek(variable, token, callback) {
+    // Pegar o ph:
+    function getPhWeek(variable, token, callback) {
     var url = 'https://industrial.api.ubidots.com/api/v1.6/variables/' + variable + '/values';
     var headers = {
     'X-Auth-Token': token,
@@ -109,7 +109,7 @@ setTimeout(()=>{
     }]
     });
     
-    getTempWeek(PH, TOKEN, function (values) {
+    getPhWeek(PH, TOKEN, function (values) {
     var data = values.map(function (value) {
     return [value.timestamp, value.value];
     });
