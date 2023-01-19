@@ -287,7 +287,12 @@ i.fa-check, i.fa-arrow-right{
 
 @media (max-width: 600px)
 {
-
+.time_data_def h1{
+	margin-top: 0px;
+    line-height: normal;
+    text-align: center;
+    font-size: 18px;
+	}
   .master_section{
     padding: 90px 7% 60px calc(7% + 50px);
   }
@@ -338,5 +343,5 @@ i.fa-check, i.fa-arrow-right{
    .edit_def_buttom{
     margin-bottom: 40px;
    }
-
+	
   }
