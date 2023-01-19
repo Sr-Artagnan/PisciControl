@@ -32,12 +32,11 @@ body{
     padding: 0;
     background:white;
     height: 100vh;
-    overflow: hidden;
   }
 
 
 .card-master {
-    margin-top: 5%;
+    margin-top: 90px;
     height: 615px;
     width: 520px;
     justify-content: space-between;
