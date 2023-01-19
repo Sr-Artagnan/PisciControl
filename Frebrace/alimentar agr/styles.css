@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+
 
 
 .card-top{
   
-    position: fixed;
+    position: relative;
     box-sizing: border-box;
     width: 174px;
     height: 89px;
@@ -11,7 +11,8 @@
     background: #DEF9FF;
     border: 2px solid #00D1FF;
     border-radius: 38px;
-    left: 26%;
+    margin-left: -50px;
+    margin-top: -70px;
 
 
 }
@@ -88,25 +89,24 @@ body{
 
 .wrapper {
     padding: 19px;
-    padding-top: 0px;
+    padding-top: 44px;
     padding-bottom: 10px;
     text-align: center;
 }
 
-.card-master h1 {
-   
-    height: 53px;
-    text-align: right 60px;
-    justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 58px;
-    top: 307px;
-    
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 35px;
-    line-height: 52px;
+hf {
+  height: 53px;
+  text-align: right 60px;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 58px;
+  top: 307px;
+  
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 52px;
 
 color: #005A94;
 }
@@ -180,7 +180,7 @@ color: #133954;
   }
   
 
-.label_input_def {
+.label_input_deff {
    
     width: 422px;
     height: 30px;
