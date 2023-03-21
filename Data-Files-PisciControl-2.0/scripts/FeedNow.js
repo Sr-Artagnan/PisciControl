@@ -57,15 +57,14 @@ console.log(typeof parseFloat(amountFoodInput.val()))
   let foodProvidedIn5Sec = 5; // variável que define o quanto de ração o sistema distribui em 5 segundos
   let time = parseFloat(5 * 1000 * amountFoodInput.val() / foodProvidedIn5Sec).toFixed(2) // Variável que define quanto tempo o motor ficará ligado para fornecer a quantidade de ração especificada
   console.log(amountFoodInput.val())
-
+/*
   setTimeout(() => {
     fetch('http://192.168.43.99/ledoff')
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error(error));
   }, 4000)
-
-
+*/
   request.open("GET", "https://script.google.com/macros/s/AKfycbwUhYvNoGI2RK8oA5Ty78M5vwgi1cut7rmKh7ZeAgCSLTygAbT9Irat7NWOCO--Gjvnrw/exec" + "?qtd=" + amountFoodInput.val())
   request.send()  
 
